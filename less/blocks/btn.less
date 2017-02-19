@@ -1,0 +1,38 @@
+.btn {
+  border: none;
+  background: none;
+  user-select: none;
+}
+
+.btn--yellow {
+  display: block;
+  width: auto;
+  height: 40px;
+
+  font-family: @font-main;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  color: @main-text-color;
+  background-image: linear-gradient(to bottom, @color-yellow-dark 0%, @color-yellow-dark 100%);
+  background-size: 100% 20%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition-property: background;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+
+  &:hover {
+    background-size: 100% 100%;
+  }
+
+  &:active {
+    color: fade(@main-text-color, 30%);
+  }
+}

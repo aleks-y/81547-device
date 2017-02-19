@@ -1,0 +1,42 @@
+.logotypes {
+  min-width: @desktop-width;
+}
+
+.logotypes__container {
+  padding-top: 95px;
+  padding-bottom: 50px;
+}
+
+.logotypes__list {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.logotypes__item {
+  flex-basis: 260px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.logotypes__link {
+  display: block;
+}
+
+.logotypes__link img {
+  display: block;
+  filter: grayscale(100%);
+  opacity: 0.2;
+
+  transition: all 0.15s linear;
+}
+
+.logotypes__link:hover img,
+.logotypes__link:focus img {
+    filter: none;
+    opacity: 1;
+}

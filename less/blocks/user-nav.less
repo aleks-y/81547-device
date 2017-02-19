@@ -1,0 +1,140 @@
+.user-nav__list {
+  display: flex;
+
+  width: 500px;
+  min-height: 50px;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.user-nav__item {
+  flex-basis: auto;
+
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--user-block {
+    flex-grow: 1;
+  }
+}
+
+.user-nav__link {
+  position: relative;
+
+  display: block;
+  padding: 6px 0 6px 25px;
+
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 36px;
+
+  transition: color 0.1s linear;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: translateY(-50%);
+
+    transition: all 0.1s linear;
+  }
+
+  &--login::before {
+    background-image: url("../img/icons/user.png");
+  }
+
+  &--compare::before {
+    background-image: url("../img/icons/compare.png");
+  }
+
+  &--cart::before {
+    background-image: url("../img/icons/cart.png");
+  }
+
+  &:hover {
+    color: fade(@main-text-color, 60%);
+  }
+
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: fade(@main-text-color, 30%);
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.user-nav--footer .user-nav__list {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  width: auto;
+}
+
+.user-nav--footer .user-nav__item--user-block {
+  flex-grow: 0;
+}
+
+.user-nav--footer .user-nav__link {
+  color: fade(@secondary-text-color, 70%);
+
+  &--login::before {
+    background-image: url("../img/icons/user--yellow.png");
+  }
+
+  &--compare::before {
+    background-image: url("../img/icons/compare--yellow.png");
+  }
+
+  &--cart::before {
+    background-image: url("../img/icons/cart--yellow.png");
+  }
+
+  &:hover {
+    color: @secondary-text-color;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &--login:hover::before {
+    background-image: url("../img/icons/user--yellow-dark.png");
+  }
+
+  &--compare:hover::before {
+    background-image: url("../img/icons/compare--yellow-dark.png");
+  }
+
+  &--cart:hover::before {
+    background-image: url("../img/icons/cart--yellow-dark.png");
+  }
+
+  &:active {
+    color: fade(@secondary-text-color, 30%);
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}

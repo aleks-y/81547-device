@@ -1,0 +1,103 @@
+.popular {
+  min-width: @desktop-width;
+}
+
+.popular__container {
+  min-height: 367px;
+  padding: 45px 0 30px;
+
+  background-color: @main-bg-color;
+}
+
+.popular__list {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+
+  min-height: 240px;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.popular__item {
+  flex-basis: 160px;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.popular__link {
+  position: relative;
+
+  display: block;
+  padding-top: 195px;
+
+  font-family: @font-main;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 22px;
+  vertical-align: top;
+  letter-spacing: 0.01em;
+
+  color: @main-text-color;
+
+  &:active {
+    color: fade(@main-text-color, 30%);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 160px;
+  }
+
+  &::before {
+    background-color: @color-yellow;
+  }
+
+  &::after {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:hover::before {
+    background-color: @color-yellow-dark;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  &--vr::after {
+    background-image: url("../img/icons/popular-1.png");
+  }
+
+  &--monopod::after {
+    background-image: url("../img/icons/popular-2.png");
+    background-position: center bottom;
+  }
+
+  &--camera::after {
+    background-image: url("../img/icons/popular-3.png");
+  }
+
+  &--fitness::after {
+    background-image: url("../img/icons/popular-4.png");
+  }
+
+  &--watch::after {
+    background-image: url("../img/icons/popular-5.png");
+  }
+
+  &--quadrocopter::after {
+    background-image: url("../img/icons/popular-6.png");
+  }
+}

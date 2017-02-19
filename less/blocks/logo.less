@@ -1,0 +1,39 @@
+.logo {
+  cursor: default;
+  transition: color 0.1s linear;
+}
+
+.logo h1 {
+  margin: 0;
+
+  font-family: @font-main;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 80px;
+  text-transform: uppercase;
+}
+
+.logo--header{
+  padding: 0 60px;
+  color: @main-text-color;
+
+  &:hover {
+    color: @main-text-color--light;
+  }
+
+  &:active {
+    color: @main-text-color--lighter;
+  }
+}
+
+.logo--footer {
+  color: @color-yellow;
+
+  &:hover {
+    color: @color-yellow-dark;
+  }
+
+  &:active {
+    color: fade(@color-yellow-dark, 30%);
+  }
+}

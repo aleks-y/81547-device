@@ -1,0 +1,78 @@
+.search {
+  position: relative;
+
+  display: flex;
+
+  width: 440px;
+  height: 50px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 36px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    background-color: transparent;
+    background-image: url("../img/icons/search.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: translateY(-50%);
+  }
+}
+
+.searh__input {
+  width: 355px;
+  height: 50px;
+  padding: 6px 10px 6px 40px;
+
+  color: @main-text-color;
+  background: none;
+  border: none;
+
+  font: inherit;
+
+  &:active,
+  &:focus,
+  &:valid {
+    padding-bottom: 4px;
+    border-bottom: 2px solid @border-color;
+  }
+}
+
+.searh__button {
+  display: none;
+  width: 85px;
+  height: 50px;
+
+  border: 2px solid @border-color;
+
+  font: inherit;
+  text-align: center;
+
+  color: @main-text-color;
+
+  &:hover {
+    color: @secondary-text-color;
+    background-color:  @bg-color-black;
+  }
+
+  &:active {
+    color: fade(@secondary-text-color, 30%);
+    background-color:  @bg-color-black;
+  }
+}
+
+.searh__input:valid ~ .searh__button {
+  display: block;
+}

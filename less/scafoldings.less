@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+
+  font-size: 100%;
+}
+
+html *,
+html *::before,
+html *::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+
+  font-family: @font-main;
+
+  color: @main-text-color;
+  background-color: #ffffff;
+}
+
+a {
+  font-family: @font-secondary;
+  text-decoration: none;
+  color: @main-text-color;
+}
+
+.visualy-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  width: @desktop-content-width;
+  margin: 0 auto;
+}
