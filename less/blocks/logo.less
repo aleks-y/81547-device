@@ -1,6 +1,9 @@
 .logo {
-  cursor: default;
   transition: color 0.1s linear;
+}
+
+.logo a {
+  display: inline-block;
 }
 
 .logo h1 {
@@ -13,8 +16,14 @@
   text-transform: uppercase;
 }
 
-.logo--header{
-  padding: 0 60px;
+.logo--header {
+  margin-left: 60px;
+
+  color: @main-text-color;
+}
+
+.logo--header a {
+
   color: @main-text-color;
 
   &:hover {
@@ -24,9 +33,14 @@
   &:active {
     color: @main-text-color--lighter;
   }
+
 }
 
 .logo--footer {
+  color: @color-yellow;
+}
+
+.logo--footer a {
   color: @color-yellow;
 
   &:hover {
